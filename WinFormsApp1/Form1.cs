@@ -96,5 +96,20 @@ namespace WinFormsApp1
 		{
 
 		}
+
+		private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+		{
+
+		}
+
+		private void trackBar1_Scroll(object sender, EventArgs e)
+		{
+
+		}
+
+		private void groupBox1_Enter(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

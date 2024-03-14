@@ -63,6 +63,11 @@
 			notifyIcon1 = new NotifyIcon(components);
 			numericUpDown1 = new NumericUpDown();
 			vScrollBar1 = new VScrollBar();
+			monthCalendar1 = new MonthCalendar();
+			splitter1 = new Splitter();
+			trackBar1 = new TrackBar();
+			process1 = new System.Diagnostics.Process();
+			groupBox1 = new GroupBox();
 			((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
 			contextMenuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -73,6 +78,7 @@
 			splitContainer1.SuspendLayout();
 			toolStripContainer1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
 			SuspendLayout();
 			// 
 			// backgroundWorker1
@@ -351,17 +357,66 @@
 			// 
 			// vScrollBar1
 			// 
-			vScrollBar1.Location = new Point(117, 359);
+			vScrollBar1.Location = new Point(167, 330);
 			vScrollBar1.Name = "vScrollBar1";
 			vScrollBar1.Size = new Size(17, 80);
 			vScrollBar1.TabIndex = 20;
 			vScrollBar1.Scroll += vScrollBar1_Scroll;
 			// 
+			// monthCalendar1
+			// 
+			monthCalendar1.Location = new Point(563, 330);
+			monthCalendar1.Name = "monthCalendar1";
+			monthCalendar1.TabIndex = 21;
+			monthCalendar1.DateChanged += monthCalendar1_DateChanged;
+			// 
+			// splitter1
+			// 
+			splitter1.Location = new Point(0, 0);
+			splitter1.Name = "splitter1";
+			splitter1.Size = new Size(10, 502);
+			splitter1.TabIndex = 22;
+			splitter1.TabStop = false;
+			// 
+			// trackBar1
+			// 
+			trackBar1.Location = new Point(30, 349);
+			trackBar1.Name = "trackBar1";
+			trackBar1.Size = new Size(104, 45);
+			trackBar1.TabIndex = 23;
+			trackBar1.Scroll += trackBar1_Scroll;
+			// 
+			// process1
+			// 
+			process1.StartInfo.Domain = "";
+			process1.StartInfo.LoadUserProfile = false;
+			process1.StartInfo.Password = null;
+			process1.StartInfo.StandardErrorEncoding = null;
+			process1.StartInfo.StandardInputEncoding = null;
+			process1.StartInfo.StandardOutputEncoding = null;
+			process1.StartInfo.UseCredentialsForNetworkingOnly = false;
+			process1.StartInfo.UserName = "";
+			process1.SynchronizingObject = this;
+			// 
+			// groupBox1
+			// 
+			groupBox1.Location = new Point(268, 349);
+			groupBox1.Name = "groupBox1";
+			groupBox1.Size = new Size(200, 100);
+			groupBox1.TabIndex = 24;
+			groupBox1.TabStop = false;
+			groupBox1.Text = "groupBox1";
+			groupBox1.Enter += groupBox1_Enter;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(1025, 484);
+			ClientSize = new Size(1025, 502);
+			Controls.Add(groupBox1);
+			Controls.Add(trackBar1);
+			Controls.Add(splitter1);
+			Controls.Add(monthCalendar1);
 			Controls.Add(vScrollBar1);
 			Controls.Add(numericUpDown1);
 			Controls.Add(richTextBox1);
@@ -397,6 +452,7 @@
 			toolStripContainer1.ResumeLayout(false);
 			toolStripContainer1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+			((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -436,5 +492,10 @@
 		private NumericUpDown numericUpDown1;
 		private NotifyIcon notifyIcon1;
 		private VScrollBar vScrollBar1;
+		private MonthCalendar monthCalendar1;
+		private TrackBar trackBar1;
+		private Splitter splitter1;
+		private System.Diagnostics.Process process1;
+		private GroupBox groupBox1;
 	}
 }
